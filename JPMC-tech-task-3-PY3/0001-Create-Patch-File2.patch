@@ -1,0 +1,27 @@
+From b8beab89f25e245a54e768057a772cb98f226ec4 Mon Sep 17 00:00:00 2001
+From: Nitin Bhandari <bnitin92@gmail.com>
+Date: Mon, 30 Nov 2020 20:09:30 -0700
+Subject: [PATCH] Create Patch File2
+
+---
+ src/DataManipulator.ts | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/DataManipulator.ts b/src/DataManipulator.ts
+index 79553a6..94d49f9 100644
+--- a/src/DataManipulator.ts
++++ b/src/DataManipulator.ts
+@@ -16,8 +16,8 @@ export class DataManipulator {
+     const priceABC= (serverRespond[0].top_ask.price + serverRespond[0].top_bid.price ) / 2;
+     const priceDEF= (serverRespond[1].top_ask.price + serverRespond[1].top_bid.price ) / 2;
+     const ratio= priceABC / priceDEF;
+-    const upperBound= 1 + 0.03;
+-    const lowerBound= 1 - 0.03;
++    const upperBound= 1 + 0.01;
++    const lowerBound= 1 - 0.01;
+     return {
+       price_abc: priceABC,
+       price_def: priceDEF,
+-- 
+2.17.1
+
